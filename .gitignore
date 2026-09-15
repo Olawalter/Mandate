@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+artifacts/
+.env
+.env.local
+node_modules/
+.next/
+out/
+frontend/next-env.d.ts
+*.tsbuildinfo
+.vercel

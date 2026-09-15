@@ -1,0 +1,11 @@
+[project]
+name = "mandate"
+version = "1.0.0"
+description = "Conditional authorization for autonomous agents, adjudicated by a GenLayer Intelligent Contract"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+testpaths = ["tests/direct"]
+markers = [
+    "live: runs against a GenLayer network (tests/integration)",
+]
