@@ -10,3 +10,4 @@ out/
 frontend/next-env.d.ts
 *.tsbuildinfo
 .vercel
+deploy/*.compiled.js

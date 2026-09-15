@@ -16,6 +16,7 @@ import path from "path";
 import { localnet } from "genlayer-js/chains";
 import {
   TransactionStatus,
+  transactionsStatusNumberToName,
   type DecodedDeployData,
   type GenLayerChain,
   type GenLayerClient,
@@ -30,19 +31,22 @@ export default async function main(client: GenLayerClient<GenLayerChain>) {
   console.log(`deployment transaction ${hash}`);
 
   const receipt = await client.waitForTransactionReceipt({ hash, status: TransactionStatus.ACCEPTED, retries: 200 });
-  if (receipt.statusName !== "ACCEPTED" && receipt.statusName !== "FINALIZED") {
-    throw new Error(`Deployment was not accepted: ${receipt.statusName}`);
+  // The CLI's bundled genlayer-js reports a numeric status without statusName; accept either form.
+  const status = receipt.statusName ?? transactionsStatusNumberToName[String(receipt.status) as keyof typeof transactionsStatusNumberToName];
+  if (status !== "ACCEPTED" && status !== "FINALIZED") {
+    throw new Error(`Deployment was not accepted: ${status ?? receipt.status}`);
   }
 
+  const fromData = (receipt.data as { contract_address?: string } | undefined)?.contract_address;
   const address = (
     (client.chain as GenLayerChain).id === localnet.id
-      ? (receipt.data as { contract_address?: string } | undefined)?.contract_address
-      : ((receipt.txDataDecoded as DecodedDeployData | undefined)?.contractAddress ??
-        (receipt.data as { contract_address?: string } | undefined)?.contract_address)
+      ? fromData
+      : (fromData ?? (receipt.txDataDecoded as DecodedDeployData | undefined)?.contractAddress)
   ) as `0x${string}` | undefined;
   if (!address) throw new Error("The deployment was accepted but carries no contract address.");
 
-  const stored = Buffer.from(await client.getContractCode(address), "base64").toString("utf8");
+  // getContractCode already decodes gen_getContractCode's base64 into text
+  const stored = await client.getContractCode(address);
   if (stored !== code) throw new Error(`The code stored at ${address} differs from contracts/mandate.py.`);
 
   const info = (await client.readContract({ address, functionName: "get_protocol_info", args: [], jsonSafeReturn: true })) as {

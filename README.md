@@ -151,10 +151,22 @@ python scripts/deploy.py                       # throwaway faucet-funded deploye
 python scripts/inspect.py <address> --write-deployment
 ```
 
-`scripts/deploy.py` was run for this build (a check deployment, `0xDF9B067F…8AAe`, FINALIZED,
-byte-identical). [`deploy/deployScript.ts`](deploy/deployScript.ts) follows the official
-boilerplate's convention for `genlayer network studionet && genlayer deploy` with the CLI's own
-account; that path was not exercised here.
+Both deploy paths were run for this build, each producing a check deployment verified
+byte-identical to `contracts/mandate.py`:
+
+| Path | Deployment |
+|---|---|
+| `python scripts/deploy.py` (ephemeral faucet-funded key, waits for FINALIZED) | `0xDF9B067F016dD48Fc1497f0732f7F3819F028AAe` |
+| `genlayer network studionet && genlayer deploy` — GenLayer CLI 0.39.2 runs [`deploy/deployScript.ts`](deploy/deployScript.ts) with the CLI's active account | `0xB79e044f7008a48c6DcC5c608eb46D2030B35CD6` |
+
+Running the CLI path found two things the script now handles: the CLI's bundled genlayer-js
+reports a numeric `status` without `statusName`, and `getContractCode` already returns decoded text.
+
+**Runner pin.** `genvm-lint` suggests a newer runner (`py-genlayer:1zr6nqk5…`). It was tried on a
+disposable deployment: StudioNet rejected it (`invalid_contract`, transaction
+`0x3913f7dc6e1f0f9cda104142698ac770815e5182f9ddf20481cad88f646e31f1`), and the linter's cached GenVM
+v0.3.0-rc7 bundle cannot load it either. MANDATE therefore stays on `py-genlayer:1jb45aa8…`, the
+runner StudioNet executes.
 
 `inspect.py` compares `gen_getContractCode` with the file at a git revision byte for byte and
 records the schema the frontend is checked against.
