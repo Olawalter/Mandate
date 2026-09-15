@@ -18,4 +18,4 @@ AI inference workloads are permitted on all compute plans.
 
 ## Billing
 
-Billing is monthly in arrears.
+Billing is quarterly in advance.
