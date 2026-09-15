@@ -1,0 +1,134 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * MANDATE design system — authorization infrastructure.
+ *
+ * Depth comes from a navy SURFACE STACK (ink canvas -> panel -> elevated),
+ * never from shadows or glow. Hairline borders separate. Cyan is the product
+ * identity and is spent on actions, focus and identifiers the user acts on.
+ * Green, red and amber are reserved for the three decisions and nothing else.
+ * Two radii: 8px panels, 6px controls. Public Sans carries prose and headings;
+ * Red Hat Mono carries every figure, id, address, amount and timestamp.
+ */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-public-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-red-hat-mono), ui-monospace, monospace;
+  --font-heading: var(--font-public-sans), ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #07111f;
+  --color-well: #0d1b2a;
+  --color-surface: #12263a;
+  --color-line: #24384b;
+  --color-text: #f4f7fa;
+  --color-dim: #94a3b8;
+  --color-signal: #22d3ee;
+  --color-signal-hover: #67e8f9;
+  --color-yes: #34d399;
+  --color-no: #f87171;
+  --color-maybe: #fbbf24;
+
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: 6px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 8px;
+  --radius-2xl: 8px;
+  --radius-3xl: 8px;
+  --radius-4xl: 8px;
+}
+
+:root {
+  --radius: 8px;
+  --background: #07111f;
+  --foreground: #f4f7fa;
+  --card: #0d1b2a;
+  --card-foreground: #f4f7fa;
+  --popover: #12263a;
+  --popover-foreground: #f4f7fa;
+  --primary: #22d3ee;
+  --primary-foreground: #07111f;
+  --secondary: #12263a;
+  --secondary-foreground: #f4f7fa;
+  --muted: #12263a;
+  --muted-foreground: #94a3b8;
+  --accent: #12263a;
+  --accent-foreground: #f4f7fa;
+  --destructive: #f87171;
+  --border: #24384b;
+  --input: #24384b;
+  --ring: #22d3ee;
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    background: #07111f;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  ::selection {
+    background: #22d3ee;
+    color: #07111f;
+  }
+  :focus-visible {
+    outline: 2px solid #22d3ee;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-[11px] font-medium tracking-[0.12em] uppercase text-dim;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .figure {
+    @apply font-mono tabular-nums;
+  }
+  /* the receipt's torn edge: a row of punched holes along a panel's top */
+  .perforated {
+    background-image: radial-gradient(circle at 8px -1px, #07111f 5px, transparent 5.5px);
+    background-size: 16px 8px;
+    background-repeat: repeat-x;
+    background-position: top left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

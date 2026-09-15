@@ -1,0 +1,626 @@
+{
+  "network": "GenLayer StudioNet",
+  "chain_id": 61999,
+  "contract": "0x5344bEae1A09c674831B174eD6BD077a5d7e58ba",
+  "recorded_at": "2026-09-15T12:40:05Z",
+  "wallet": "E2E test harness: an EIP-6963 provider injected into the page, throwaway key, faucet-funded",
+  "mandate": {
+    "agent": "0x31E9A0635fd73C14669Eb70150B1eCf2583abAAc",
+    "authorized_count": 2,
+    "baseline_snapshot_id": 9,
+    "created_at": 1789474330,
+    "denied_count": 0,
+    "mandate_id": "3",
+    "principal": "0x31E9A0635fd73C14669Eb70150B1eCf2583abAAc",
+    "reassess_count": 2,
+    "request_count": 4,
+    "revoked_at": 0,
+    "status": "ACTIVE",
+    "terms": {
+      "action_type": "PURCHASE",
+      "agent_label": "Procurement Agent",
+      "conditions": [
+        {
+          "key": "terms_compatible",
+          "requirement": "The current terms allow business customers to buy this service."
+        },
+        {
+          "key": "intended_use_permitted",
+          "requirement": "The acceptable use policy permits the intended use."
+        }
+      ],
+      "created_at": 1789474330,
+      "currency": "USD",
+      "expires_at": 1792066080,
+      "intended_use": "Run AI inference workloads",
+      "max_amount": 500000,
+      "sources": [
+        {
+          "host": "raw.githubusercontent.com",
+          "id": "S1",
+          "purpose": "POLICY",
+          "url": "https://raw.githubusercontent.com/Olawalter/Mandate/main/demo/northwind-compute/acceptable-use.md"
+        }
+      ],
+      "target": "Northwind Compute capacity",
+      "version": 1
+    },
+    "updated_at": 1789474330,
+    "version": 1
+  },
+  "receipts": [
+    {
+      "mandate_terms": {
+        "action_type": "PURCHASE",
+        "agent_label": "Procurement Agent",
+        "conditions": [
+          {
+            "key": "terms_compatible",
+            "requirement": "The current terms allow business customers to buy this service."
+          },
+          {
+            "key": "intended_use_permitted",
+            "requirement": "The acceptable use policy permits the intended use."
+          }
+        ],
+        "created_at": 1789474330,
+        "currency": "USD",
+        "expires_at": 1792066080,
+        "intended_use": "Run AI inference workloads",
+        "max_amount": 500000,
+        "sources": [
+          {
+            "host": "raw.githubusercontent.com",
+            "id": "S1",
+            "purpose": "POLICY",
+            "url": "https://raw.githubusercontent.com/Olawalter/Mandate/main/demo/northwind-compute/acceptable-use.md"
+          }
+        ],
+        "target": "Northwind Compute capacity",
+        "version": 1
+      },
+      "request": {
+        "action_type": "PURCHASE",
+        "affected_conditions": [],
+        "agent": "0x31E9A0635fd73C14669Eb70150B1eCf2583abAAc",
+        "amount": 470000,
+        "assessed": true,
+        "currency": "USD",
+        "decision": "AUTHORIZED",
+        "mandate_id": "3",
+        "mandate_version": 1,
+        "material_change": false,
+        "preflight": [
+          {
+            "check": "agent_matches_mandate",
+            "passed": true
+          },
+          {
+            "check": "mandate_active",
+            "passed": true
+          },
+          {
+            "check": "mandate_not_expired",
+            "passed": true
+          },
+          {
+            "check": "version_current",
+            "passed": true
+          },
+          {
+            "check": "action_permitted",
+            "passed": true
+          },
+          {
+            "check": "target_permitted",
+            "passed": true
+          },
+          {
+            "check": "currency_matches",
+            "passed": true
+          },
+          {
+            "check": "amount_within_limit",
+            "passed": true
+          }
+        ],
+        "principal": "0x31E9A0635fd73C14669Eb70150B1eCf2583abAAc",
+        "reason_code": "CONDITIONS_SATISFIED",
+        "request_id": "11",
+        "request_key": "req-mu2mv2qq-a7jqqe",
+        "requested_version": 1,
+        "snapshot_id": 6,
+        "submitted_at": 1789474418,
+        "target": "Northwind Compute capacity"
+      },
+      "snapshot": {
+        "affected_conditions": [],
+        "baseline_snapshot_id": 0,
+        "conditions": [
+          {
+            "finding": "SATISFIED",
+            "key": "terms_compatible",
+            "quote": "Business customers may purchase compute capacity under these terms.",
+            "source": "S1"
+          },
+          {
+            "finding": "SATISFIED",
+            "key": "intended_use_permitted",
+            "quote": "AI inference workloads are permitted on all compute plans.",
+            "source": "S1"
+          }
+        ],
+        "evaluated_at": 1789474418,
+        "intended_use_permitted": true,
+        "mandate_id": "3",
+        "mandate_version": 1,
+        "material_change": false,
+        "provider_eligible": null,
+        "request_id": "11",
+        "service_available": null,
+        "snapshot_id": 6,
+        "source_count": 1,
+        "sources": [
+          {
+            "id": "S1",
+            "purpose": "POLICY",
+            "readable": true,
+            "url": "https://raw.githubusercontent.com/Olawalter/Mandate/main/demo/northwind-compute/acceptable-use.md"
+          }
+        ],
+        "terms_compatible": true
+      }
+    },
+    {
+      "mandate_terms": {
+        "action_type": "PURCHASE",
+        "agent_label": "Procurement Agent",
+        "conditions": [
+          {
+            "key": "terms_compatible",
+            "requirement": "The current terms allow business customers to buy this service."
+          },
+          {
+            "key": "intended_use_permitted",
+            "requirement": "The acceptable use policy permits the intended use."
+          }
+        ],
+        "created_at": 1789474330,
+        "currency": "USD",
+        "expires_at": 1792066080,
+        "intended_use": "Run AI inference workloads",
+        "max_amount": 500000,
+        "sources": [
+          {
+            "host": "raw.githubusercontent.com",
+            "id": "S1",
+            "purpose": "POLICY",
+            "url": "https://raw.githubusercontent.com/Olawalter/Mandate/main/demo/northwind-compute/acceptable-use.md"
+          }
+        ],
+        "target": "Northwind Compute capacity",
+        "version": 1
+      },
+      "request": {
+        "action_type": "PURCHASE",
+        "affected_conditions": [
+          "intended_use_permitted"
+        ],
+        "agent": "0x31E9A0635fd73C14669Eb70150B1eCf2583abAAc",
+        "amount": 470000,
+        "assessed": true,
+        "currency": "USD",
+        "decision": "REASSESS_REQUIRED",
+        "mandate_id": "3",
+        "mandate_version": 1,
+        "material_change": true,
+        "preflight": [
+          {
+            "check": "agent_matches_mandate",
+            "passed": true
+          },
+          {
+            "check": "mandate_active",
+            "passed": true
+          },
+          {
+            "check": "mandate_not_expired",
+            "passed": true
+          },
+          {
+            "check": "version_current",
+            "passed": true
+          },
+          {
+            "check": "action_permitted",
+            "passed": true
+          },
+          {
+            "check": "target_permitted",
+            "passed": true
+          },
+          {
+            "check": "currency_matches",
+            "passed": true
+          },
+          {
+            "check": "amount_within_limit",
+            "passed": true
+          }
+        ],
+        "principal": "0x31E9A0635fd73C14669Eb70150B1eCf2583abAAc",
+        "reason_code": "MATERIAL_CHANGE",
+        "request_id": "12",
+        "request_key": "req-mu2n88np-oqp9qk",
+        "requested_version": 1,
+        "snapshot_id": 7,
+        "submitted_at": 1789475033,
+        "target": "Northwind Compute capacity"
+      },
+      "snapshot": {
+        "affected_conditions": [
+          "intended_use_permitted"
+        ],
+        "baseline_snapshot_id": 6,
+        "conditions": [
+          {
+            "finding": "SATISFIED",
+            "key": "terms_compatible",
+            "quote": "Business customers may purchase compute capacity under these terms.",
+            "source": "S1"
+          },
+          {
+            "finding": "VIOLATED",
+            "key": "intended_use_permitted",
+            "quote": "AI inference workloads are prohibited on all compute plans.",
+            "source": "S1"
+          }
+        ],
+        "evaluated_at": 1789475033,
+        "intended_use_permitted": false,
+        "mandate_id": "3",
+        "mandate_version": 1,
+        "material_change": true,
+        "provider_eligible": null,
+        "request_id": "12",
+        "service_available": null,
+        "snapshot_id": 7,
+        "source_count": 1,
+        "sources": [
+          {
+            "id": "S1",
+            "purpose": "POLICY",
+            "readable": true,
+            "url": "https://raw.githubusercontent.com/Olawalter/Mandate/main/demo/northwind-compute/acceptable-use.md"
+          }
+        ],
+        "terms_compatible": true
+      }
+    },
+    {
+      "mandate_terms": {
+        "action_type": "PURCHASE",
+        "agent_label": "Procurement Agent",
+        "conditions": [
+          {
+            "key": "terms_compatible",
+            "requirement": "The current terms allow business customers to buy this service."
+          },
+          {
+            "key": "intended_use_permitted",
+            "requirement": "The acceptable use policy permits the intended use."
+          }
+        ],
+        "created_at": 1789474330,
+        "currency": "USD",
+        "expires_at": 1792066080,
+        "intended_use": "Run AI inference workloads",
+        "max_amount": 500000,
+        "sources": [
+          {
+            "host": "raw.githubusercontent.com",
+            "id": "S1",
+            "purpose": "POLICY",
+            "url": "https://raw.githubusercontent.com/Olawalter/Mandate/main/demo/northwind-compute/acceptable-use.md"
+          }
+        ],
+        "target": "Northwind Compute capacity",
+        "version": 1
+      },
+      "request": {
+        "action_type": "PURCHASE",
+        "affected_conditions": [
+          "intended_use_permitted"
+        ],
+        "agent": "0x31E9A0635fd73C14669Eb70150B1eCf2583abAAc",
+        "amount": 470000,
+        "assessed": true,
+        "currency": "USD",
+        "decision": "REASSESS_REQUIRED",
+        "mandate_id": "3",
+        "mandate_version": 1,
+        "material_change": true,
+        "preflight": [
+          {
+            "check": "agent_matches_mandate",
+            "passed": true
+          },
+          {
+            "check": "mandate_active",
+            "passed": true
+          },
+          {
+            "check": "mandate_not_expired",
+            "passed": true
+          },
+          {
+            "check": "version_current",
+            "passed": true
+          },
+          {
+            "check": "action_permitted",
+            "passed": true
+          },
+          {
+            "check": "target_permitted",
+            "passed": true
+          },
+          {
+            "check": "currency_matches",
+            "passed": true
+          },
+          {
+            "check": "amount_within_limit",
+            "passed": true
+          }
+        ],
+        "principal": "0x31E9A0635fd73C14669Eb70150B1eCf2583abAAc",
+        "reason_code": "MATERIAL_CHANGE",
+        "request_id": "13",
+        "request_key": "req-mu2n9ynr-rnkggh",
+        "requested_version": 1,
+        "snapshot_id": 8,
+        "submitted_at": 1789475113,
+        "target": "Northwind Compute capacity"
+      },
+      "snapshot": {
+        "affected_conditions": [
+          "intended_use_permitted"
+        ],
+        "baseline_snapshot_id": 6,
+        "conditions": [
+          {
+            "finding": "SATISFIED",
+            "key": "terms_compatible",
+            "quote": "Business customers may purchase compute capacity under these terms.",
+            "source": "S1"
+          },
+          {
+            "finding": "VIOLATED",
+            "key": "intended_use_permitted",
+            "quote": "AI inference workloads are prohibited on all compute plans.",
+            "source": "S1"
+          }
+        ],
+        "evaluated_at": 1789475113,
+        "intended_use_permitted": false,
+        "mandate_id": "3",
+        "mandate_version": 1,
+        "material_change": true,
+        "provider_eligible": null,
+        "request_id": "13",
+        "service_available": null,
+        "snapshot_id": 8,
+        "source_count": 1,
+        "sources": [
+          {
+            "id": "S1",
+            "purpose": "POLICY",
+            "readable": true,
+            "url": "https://raw.githubusercontent.com/Olawalter/Mandate/main/demo/northwind-compute/acceptable-use.md"
+          }
+        ],
+        "terms_compatible": true
+      }
+    },
+    {
+      "mandate_terms": {
+        "action_type": "PURCHASE",
+        "agent_label": "Procurement Agent",
+        "conditions": [
+          {
+            "key": "terms_compatible",
+            "requirement": "The current terms allow business customers to buy this service."
+          },
+          {
+            "key": "intended_use_permitted",
+            "requirement": "The acceptable use policy permits the intended use."
+          }
+        ],
+        "created_at": 1789474330,
+        "currency": "USD",
+        "expires_at": 1792066080,
+        "intended_use": "Run AI inference workloads",
+        "max_amount": 500000,
+        "sources": [
+          {
+            "host": "raw.githubusercontent.com",
+            "id": "S1",
+            "purpose": "POLICY",
+            "url": "https://raw.githubusercontent.com/Olawalter/Mandate/main/demo/northwind-compute/acceptable-use.md"
+          }
+        ],
+        "target": "Northwind Compute capacity",
+        "version": 1
+      },
+      "request": {
+        "action_type": "PURCHASE",
+        "affected_conditions": [],
+        "agent": "0x31E9A0635fd73C14669Eb70150B1eCf2583abAAc",
+        "amount": 470000,
+        "assessed": true,
+        "currency": "USD",
+        "decision": "AUTHORIZED",
+        "mandate_id": "3",
+        "mandate_version": 1,
+        "material_change": false,
+        "preflight": [
+          {
+            "check": "agent_matches_mandate",
+            "passed": true
+          },
+          {
+            "check": "mandate_active",
+            "passed": true
+          },
+          {
+            "check": "mandate_not_expired",
+            "passed": true
+          },
+          {
+            "check": "version_current",
+            "passed": true
+          },
+          {
+            "check": "action_permitted",
+            "passed": true
+          },
+          {
+            "check": "target_permitted",
+            "passed": true
+          },
+          {
+            "check": "currency_matches",
+            "passed": true
+          },
+          {
+            "check": "amount_within_limit",
+            "passed": true
+          }
+        ],
+        "principal": "0x31E9A0635fd73C14669Eb70150B1eCf2583abAAc",
+        "reason_code": "CONDITIONS_SATISFIED",
+        "request_id": "14",
+        "request_key": "req-mu2npbft-82auj2",
+        "requested_version": 1,
+        "snapshot_id": 9,
+        "submitted_at": 1789475830,
+        "target": "Northwind Compute capacity"
+      },
+      "snapshot": {
+        "affected_conditions": [],
+        "baseline_snapshot_id": 6,
+        "conditions": [
+          {
+            "finding": "SATISFIED",
+            "key": "terms_compatible",
+            "quote": "Business customers may purchase compute capacity under these terms.",
+            "source": "S1"
+          },
+          {
+            "finding": "SATISFIED",
+            "key": "intended_use_permitted",
+            "quote": "AI inference workloads are permitted on all compute plans.",
+            "source": "S1"
+          }
+        ],
+        "evaluated_at": 1789475830,
+        "intended_use_permitted": true,
+        "mandate_id": "3",
+        "mandate_version": 1,
+        "material_change": false,
+        "provider_eligible": null,
+        "request_id": "14",
+        "service_available": null,
+        "snapshot_id": 9,
+        "source_count": 1,
+        "sources": [
+          {
+            "id": "S1",
+            "purpose": "POLICY",
+            "readable": true,
+            "url": "https://raw.githubusercontent.com/Olawalter/Mandate/main/demo/northwind-compute/acceptable-use.md"
+          }
+        ],
+        "terms_compatible": true
+      }
+    }
+  ],
+  "transactions": [
+    {
+      "hash": "0xc120ff2932130b7017d960b20734ad7b5b69d1029a5dbec335fffa4efebe5a2e",
+      "from": "0x31E9A0635fd73C14669Eb70150B1eCf2583abAAc",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "votes": [
+        "agree",
+        "agree",
+        "agree",
+        "idle",
+        "idle"
+      ],
+      "created_at": "2026-09-15T12:12:10.243640+00:00"
+    },
+    {
+      "hash": "0x25bfa2abe89f3abb9dbc0e5192cdb2952b21f8c6a7e44bc2a61e11ddcb7fca03",
+      "from": "0x31E9A0635fd73C14669Eb70150B1eCf2583abAAc",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "votes": [
+        "agree",
+        "agree",
+        "agree",
+        "idle",
+        "idle"
+      ],
+      "created_at": "2026-09-15T12:13:38.559237+00:00"
+    },
+    {
+      "hash": "0x7313f27e429c345526d40ea2adfebc74715db44a20375b921a4f3bc83f9112cf",
+      "from": "0x31E9A0635fd73C14669Eb70150B1eCf2583abAAc",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "votes": [
+        "agree",
+        "agree",
+        "agree",
+        "idle",
+        "idle"
+      ],
+      "created_at": "2026-09-15T12:23:53.278819+00:00"
+    },
+    {
+      "hash": "0x0159121348c7cc49a09ec2d004a2c64306114bb89a3e2af6f4bef05505d0d9db",
+      "from": "0x31E9A0635fd73C14669Eb70150B1eCf2583abAAc",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "votes": [
+        "agree",
+        "agree",
+        "agree",
+        "idle",
+        "idle"
+      ],
+      "created_at": "2026-09-15T12:25:13.969687+00:00"
+    },
+    {
+      "hash": "0xdafbe2f91c88b72127af69a7c4e6fea9583f9606364495b7971a81050b8a5880",
+      "from": "0x31E9A0635fd73C14669Eb70150B1eCf2583abAAc",
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "votes": [
+        "agree",
+        "agree",
+        "agree",
+        "idle",
+        "idle"
+      ],
+      "created_at": "2026-09-15T12:37:10.218868+00:00"
+    }
+  ]
+}

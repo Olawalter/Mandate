@@ -1,0 +1,327 @@
+{
+  "network": "GenLayer StudioNet",
+  "chain_id": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "explorer": "https://explorer-studio.genlayer.com/address/0x5344bEae1A09c674831B174eD6BD077a5d7e58ba",
+  "contract": "0x5344bEae1A09c674831B174eD6BD077a5d7e58ba",
+  "protocol_version": "MANDATE-1.0.0",
+  "source": "contracts/mandate.py",
+  "source_revision": "d650465935f2daae3905c54255d676113d657777",
+  "code_bytes": 49698,
+  "code_sha256": "9a6db572f57c51e28e67f82e483f33a63a99ee163add4401288e49e585a2f315",
+  "byte_identical_to_source": true,
+  "verified_at": "2026-09-15T11:55:09Z",
+  "schema_methods": {
+    "create_mandate": {
+      "params": [
+        [
+          "agent",
+          "string"
+        ],
+        [
+          "agent_label",
+          "string"
+        ],
+        [
+          "action_type",
+          "string"
+        ],
+        [
+          "target",
+          "string"
+        ],
+        [
+          "max_amount",
+          "int"
+        ],
+        [
+          "currency",
+          "string"
+        ],
+        [
+          "expires_at",
+          "int"
+        ],
+        [
+          "intended_use",
+          "string"
+        ],
+        [
+          "conditions_json",
+          "string"
+        ],
+        [
+          "sources_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "ret": "string",
+      "readonly": false,
+      "payable": false
+    },
+    "get_agent_mandates": {
+      "params": [
+        [
+          "agent",
+          "string"
+        ],
+        [
+          "offset",
+          "int"
+        ],
+        [
+          "limit",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "ret": "dict",
+      "readonly": true,
+      "payable": null
+    },
+    "get_authorization": {
+      "params": [
+        [
+          "request_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "ret": "dict",
+      "readonly": true,
+      "payable": null
+    },
+    "get_decision_receipt": {
+      "params": [
+        [
+          "request_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "ret": "dict",
+      "readonly": true,
+      "payable": null
+    },
+    "get_evidence_snapshot": {
+      "params": [
+        [
+          "snapshot_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "ret": "dict",
+      "readonly": true,
+      "payable": null
+    },
+    "get_mandate": {
+      "params": [
+        [
+          "mandate_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "ret": "dict",
+      "readonly": true,
+      "payable": null
+    },
+    "get_mandate_version": {
+      "params": [
+        [
+          "mandate_id",
+          "string"
+        ],
+        [
+          "version",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "ret": "dict",
+      "readonly": true,
+      "payable": null
+    },
+    "get_principal_mandates": {
+      "params": [
+        [
+          "principal",
+          "string"
+        ],
+        [
+          "offset",
+          "int"
+        ],
+        [
+          "limit",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "ret": "dict",
+      "readonly": true,
+      "payable": null
+    },
+    "get_protocol_info": {
+      "params": [],
+      "kwparams": {},
+      "ret": "dict",
+      "readonly": true,
+      "payable": null
+    },
+    "list_mandate_requests": {
+      "params": [
+        [
+          "mandate_id",
+          "string"
+        ],
+        [
+          "offset",
+          "int"
+        ],
+        [
+          "limit",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "ret": "dict",
+      "readonly": true,
+      "payable": null
+    },
+    "list_mandates": {
+      "params": [
+        [
+          "offset",
+          "int"
+        ],
+        [
+          "limit",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "ret": "dict",
+      "readonly": true,
+      "payable": null
+    },
+    "list_requests": {
+      "params": [
+        [
+          "offset",
+          "int"
+        ],
+        [
+          "limit",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "ret": "dict",
+      "readonly": true,
+      "payable": null
+    },
+    "request_authorization": {
+      "params": [
+        [
+          "mandate_id",
+          "string"
+        ],
+        [
+          "mandate_version",
+          "int"
+        ],
+        [
+          "action_type",
+          "string"
+        ],
+        [
+          "target",
+          "string"
+        ],
+        [
+          "amount",
+          "int"
+        ],
+        [
+          "currency",
+          "string"
+        ],
+        [
+          "request_key",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "ret": "string",
+      "readonly": false,
+      "payable": false
+    },
+    "revoke_mandate": {
+      "params": [
+        [
+          "mandate_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "ret": "null",
+      "readonly": false,
+      "payable": false
+    },
+    "update_mandate": {
+      "params": [
+        [
+          "mandate_id",
+          "string"
+        ],
+        [
+          "expected_version",
+          "int"
+        ],
+        [
+          "agent_label",
+          "string"
+        ],
+        [
+          "action_type",
+          "string"
+        ],
+        [
+          "target",
+          "string"
+        ],
+        [
+          "max_amount",
+          "int"
+        ],
+        [
+          "currency",
+          "string"
+        ],
+        [
+          "expires_at",
+          "int"
+        ],
+        [
+          "intended_use",
+          "string"
+        ],
+        [
+          "conditions_json",
+          "string"
+        ],
+        [
+          "sources_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "ret": "int",
+      "readonly": false,
+      "payable": false
+    }
+  }
+}

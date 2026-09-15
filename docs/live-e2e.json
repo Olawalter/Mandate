@@ -1,0 +1,1271 @@
+{
+  "network": "GenLayer StudioNet",
+  "chain_id": 61999,
+  "rpc": "https://studio.genlayer.com/api",
+  "finality_window_seconds": 30,
+  "accounts": {
+    "principal": "0x2E51c205910f1d319A32249b65cA6F4b0345821d",
+    "agent": "0x0b5358932B722a42de71F5DdDFA4b354287d03c6",
+    "stranger": "0x48397DC0C62d5DcC781f8C01391C5a76d5136aDD"
+  },
+  "started_at": "2026-09-15T11:27:07Z",
+  "transactions": [
+    {
+      "step": "create_mandate [real_evidence]",
+      "mandate": "real_evidence",
+      "function": "create_mandate",
+      "caller": "principal",
+      "tx": "0x0a531529e1b0e1abc802bcdec6e430d3305b8be080f08010c7831ba16929cd15",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "refused": false
+    },
+    {
+      "step": "request_authorization [real evidence]",
+      "mandate": "real_evidence",
+      "function": "request_authorization",
+      "caller": "agent",
+      "tx": "0xc618a68a1c9fe1831b6b18132acb40604c3c20a817f1b9f5fa36a4f8a1c9f14c",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "refused": false
+    },
+    {
+      "step": "create_mandate [material_change]",
+      "mandate": "material_change",
+      "function": "create_mandate",
+      "caller": "principal",
+      "tx": "0x4d2cd8cd62770a009f51f045b91af79d375afe481a77927e5007238f2a916bf7",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "refused": false
+    },
+    {
+      "step": "request [policy permits inference]",
+      "mandate": "material_change",
+      "function": "request_authorization",
+      "caller": "agent",
+      "tx": "0x860544bcdc0b71a114ad1a1d79f8e93771dfadd77e34da1b5c69cadc5b56f908",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "refused": false
+    },
+    {
+      "step": "request [billing wording changed]",
+      "mandate": "material_change",
+      "function": "request_authorization",
+      "caller": "agent",
+      "tx": "0x1bb4a8f72a0c86227013de05d8d15bd847eff1e84694886ab5a7e467848aa9db",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "refused": false
+    },
+    {
+      "step": "request [policy prohibits inference]",
+      "mandate": "material_change",
+      "function": "request_authorization",
+      "caller": "agent",
+      "tx": "0x2150de44eaef792f4243ecea3c899eb15f5b89f389a8b72afa11d0b780030b44",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "refused": false
+    },
+    {
+      "step": "request [fresh assessment, permitted again]",
+      "mandate": "material_change",
+      "function": "request_authorization",
+      "caller": "agent",
+      "tx": "0x6b79c93670d2e8181bfc71fc0da8697de2ebd5a2ad49cd848d719ad737eb4f83",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "refused": false
+    },
+    {
+      "step": "request by a stranger (refused)",
+      "mandate": "real_evidence",
+      "function": "request_authorization",
+      "caller": "stranger",
+      "tx": "0x5d550ee00f85e21927f149825e0aa96d1b3fd5651544ae80510032062ebb859d",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "refused": true,
+      "refusal": "[EXPECTED] only the mandate's agent can request authorization"
+    },
+    {
+      "step": "request by the principal (refused)",
+      "mandate": "real_evidence",
+      "function": "request_authorization",
+      "caller": "principal",
+      "tx": "0x884a8072a53b9250445a85908d61a3c9ea2c33d4bf6e0af4838daf2f9ac09775",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "refused": true,
+      "refusal": "[EXPECTED] only the mandate's agent can request authorization"
+    },
+    {
+      "step": "request above the limit",
+      "mandate": "real_evidence",
+      "function": "request_authorization",
+      "caller": "agent",
+      "tx": "0xf11cc0d1fc479bbe71eeec4222a6bc056f0997866fd1b7cde53074070a8ecbb8",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "refused": false
+    },
+    {
+      "step": "request for another target",
+      "mandate": "real_evidence",
+      "function": "request_authorization",
+      "caller": "agent",
+      "tx": "0xe6f76d87f0b40289b36ae9f32fa24347ab6df6152a562f7caa12d539fcd395bd",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "refused": false
+    },
+    {
+      "step": "request for another action",
+      "mandate": "real_evidence",
+      "function": "request_authorization",
+      "caller": "agent",
+      "tx": "0x57c1452ffbac4b1e4bc993fe1c0780f7d8c6732c723a42bb487e0b4d415104a1",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "refused": false
+    },
+    {
+      "step": "replay of the first request_key (refused)",
+      "mandate": "real_evidence",
+      "function": "request_authorization",
+      "caller": "agent",
+      "tx": "0xaf4dc546e172638e3241fdf2b5a54c8f018967dcf94cafbfd2e601b342e90b92",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "refused": true,
+      "refusal": "[EXPECTED] request_key live-real_evidence-1 was already used by request 1"
+    },
+    {
+      "step": "update by a stranger (refused)",
+      "mandate": "real_evidence",
+      "function": "update_mandate",
+      "caller": "stranger",
+      "tx": "0x16328bceda7cec4ba215dfe280f75379707957637609c81eccc96e78fb4e211b",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "refused": true,
+      "refusal": "[EXPECTED] only the principal can update mandate 1"
+    },
+    {
+      "step": "revoke by a stranger (refused)",
+      "mandate": "real_evidence",
+      "function": "revoke_mandate",
+      "caller": "stranger",
+      "tx": "0xeb8f11f7285a32eda6f15839b85059dc7b5c05b1a1e262cf2298753c34ad8fd9",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "refused": true,
+      "refusal": "[EXPECTED] only the principal can revoke mandate 1"
+    },
+    {
+      "step": "update_mandate -> version 2",
+      "mandate": "real_evidence",
+      "function": "update_mandate",
+      "caller": "principal",
+      "tx": "0x55a5f837938c44a0f73050de0ee26d248456bec3be8ba8b8aaa0aa024e820fba",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "refused": false
+    },
+    {
+      "step": "request naming version 1 after update",
+      "mandate": "real_evidence",
+      "function": "request_authorization",
+      "caller": "agent",
+      "tx": "0xd5af093b02021820e11931442e16ecc7818555530fcce53f2f8ed9451329f07d",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "refused": false
+    },
+    {
+      "step": "revoke_mandate",
+      "mandate": "real_evidence",
+      "function": "revoke_mandate",
+      "caller": "principal",
+      "tx": "0xee2a340f20d2a96ed5623ec8093be6a451ae88dba24d0aa662627338445ac7fb",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "refused": false
+    },
+    {
+      "step": "request after revocation",
+      "mandate": "real_evidence",
+      "function": "request_authorization",
+      "caller": "agent",
+      "tx": "0x189eb0bf362fab1e695322eab866636fc2323011ca2a6bce0dd5dc120260e52f",
+      "status": "ACCEPTED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "refused": false
+    }
+  ],
+  "mandates": {
+    "real_evidence": {
+      "mandate_id": "1",
+      "terms": {
+        "action_type": "PURCHASE",
+        "agent_label": "Procurement Agent",
+        "conditions": [
+          {
+            "key": "service_available",
+            "requirement": "GitHub reports the Codespaces component as operational."
+          }
+        ],
+        "created_at": 1789471662,
+        "currency": "USD",
+        "expires_at": 1790076454,
+        "intended_use": "Cloud development environments for the engineering team",
+        "max_amount": 500000,
+        "sources": [
+          {
+            "host": "www.githubstatus.com",
+            "id": "S1",
+            "purpose": "PROVIDER_STATUS",
+            "url": "https://www.githubstatus.com/api/v2/components.json"
+          },
+          {
+            "host": "www.githubstatus.com",
+            "id": "S2",
+            "purpose": "PROVIDER_STATUS",
+            "url": "https://www.githubstatus.com/api/v2/status.json"
+          }
+        ],
+        "target": "GitHub Codespaces compute",
+        "version": 1
+      },
+      "requests": [
+        {
+          "tx": "0xc618a68a1c9fe1831b6b18132acb40604c3c20a817f1b9f5fa36a4f8a1c9f14c",
+          "request_key": "live-real_evidence-1",
+          "request": {
+            "action_type": "PURCHASE",
+            "affected_conditions": [],
+            "agent": "0x0b5358932B722a42de71F5DdDFA4b354287d03c6",
+            "amount": 470000,
+            "assessed": true,
+            "currency": "USD",
+            "decision": "AUTHORIZED",
+            "mandate_id": "1",
+            "mandate_version": 1,
+            "material_change": false,
+            "preflight": [
+              {
+                "check": "agent_matches_mandate",
+                "passed": true
+              },
+              {
+                "check": "mandate_active",
+                "passed": true
+              },
+              {
+                "check": "mandate_not_expired",
+                "passed": true
+              },
+              {
+                "check": "version_current",
+                "passed": true
+              },
+              {
+                "check": "action_permitted",
+                "passed": true
+              },
+              {
+                "check": "target_permitted",
+                "passed": true
+              },
+              {
+                "check": "currency_matches",
+                "passed": true
+              },
+              {
+                "check": "amount_within_limit",
+                "passed": true
+              }
+            ],
+            "principal": "0x2E51c205910f1d319A32249b65cA6F4b0345821d",
+            "reason_code": "CONDITIONS_SATISFIED",
+            "request_id": "1",
+            "request_key": "live-real_evidence-1",
+            "requested_version": 1,
+            "snapshot_id": 1,
+            "submitted_at": 1789471681,
+            "target": "GitHub Codespaces compute"
+          },
+          "snapshot": {
+            "affected_conditions": [],
+            "baseline_snapshot_id": 0,
+            "conditions": [
+              {
+                "finding": "SATISFIED",
+                "key": "service_available",
+                "quote": "\"Codespaces\",\"status\":\"operational\"",
+                "source": "S1"
+              }
+            ],
+            "evaluated_at": 1789471681,
+            "intended_use_permitted": null,
+            "mandate_id": "1",
+            "mandate_version": 1,
+            "material_change": false,
+            "provider_eligible": null,
+            "request_id": "1",
+            "service_available": true,
+            "snapshot_id": 1,
+            "source_count": 2,
+            "sources": [
+              {
+                "id": "S1",
+                "purpose": "PROVIDER_STATUS",
+                "readable": true,
+                "url": "https://www.githubstatus.com/api/v2/components.json"
+              },
+              {
+                "id": "S2",
+                "purpose": "PROVIDER_STATUS",
+                "readable": true,
+                "url": "https://www.githubstatus.com/api/v2/status.json"
+              }
+            ],
+            "terms_compatible": null
+          },
+          "step": "request_authorization [real evidence]"
+        },
+        {
+          "tx": "0x5d550ee00f85e21927f149825e0aa96d1b3fd5651544ae80510032062ebb859d",
+          "request_key": "live-real_evidence-6",
+          "step": "request by a stranger (refused)"
+        },
+        {
+          "tx": "0x884a8072a53b9250445a85908d61a3c9ea2c33d4bf6e0af4838daf2f9ac09775",
+          "request_key": "live-real_evidence-7",
+          "step": "request by the principal (refused)"
+        },
+        {
+          "tx": "0xf11cc0d1fc479bbe71eeec4222a6bc056f0997866fd1b7cde53074070a8ecbb8",
+          "request_key": "live-real_evidence-8",
+          "request": {
+            "action_type": "PURCHASE",
+            "affected_conditions": [],
+            "agent": "0x0b5358932B722a42de71F5DdDFA4b354287d03c6",
+            "amount": 500001,
+            "assessed": false,
+            "currency": "USD",
+            "decision": "DENIED",
+            "mandate_id": "1",
+            "mandate_version": 1,
+            "material_change": false,
+            "preflight": [
+              {
+                "check": "agent_matches_mandate",
+                "passed": true
+              },
+              {
+                "check": "mandate_active",
+                "passed": true
+              },
+              {
+                "check": "mandate_not_expired",
+                "passed": true
+              },
+              {
+                "check": "version_current",
+                "passed": true
+              },
+              {
+                "check": "action_permitted",
+                "passed": true
+              },
+              {
+                "check": "target_permitted",
+                "passed": true
+              },
+              {
+                "check": "currency_matches",
+                "passed": true
+              },
+              {
+                "check": "amount_within_limit",
+                "passed": false
+              }
+            ],
+            "principal": "0x2E51c205910f1d319A32249b65cA6F4b0345821d",
+            "reason_code": "AMOUNT_EXCEEDS_LIMIT",
+            "request_id": "6",
+            "request_key": "live-real_evidence-8",
+            "requested_version": 1,
+            "snapshot_id": 0,
+            "submitted_at": 1789473001,
+            "target": "GitHub Codespaces compute"
+          },
+          "step": "request above the limit"
+        },
+        {
+          "tx": "0xe6f76d87f0b40289b36ae9f32fa24347ab6df6152a562f7caa12d539fcd395bd",
+          "request_key": "live-real_evidence-9",
+          "request": {
+            "action_type": "PURCHASE",
+            "affected_conditions": [],
+            "agent": "0x0b5358932B722a42de71F5DdDFA4b354287d03c6",
+            "amount": 470000,
+            "assessed": false,
+            "currency": "USD",
+            "decision": "DENIED",
+            "mandate_id": "1",
+            "mandate_version": 1,
+            "material_change": false,
+            "preflight": [
+              {
+                "check": "agent_matches_mandate",
+                "passed": true
+              },
+              {
+                "check": "mandate_active",
+                "passed": true
+              },
+              {
+                "check": "mandate_not_expired",
+                "passed": true
+              },
+              {
+                "check": "version_current",
+                "passed": true
+              },
+              {
+                "check": "action_permitted",
+                "passed": true
+              },
+              {
+                "check": "target_permitted",
+                "passed": false
+              },
+              {
+                "check": "currency_matches",
+                "passed": true
+              },
+              {
+                "check": "amount_within_limit",
+                "passed": true
+              }
+            ],
+            "principal": "0x2E51c205910f1d319A32249b65cA6F4b0345821d",
+            "reason_code": "TARGET_NOT_PERMITTED",
+            "request_id": "7",
+            "request_key": "live-real_evidence-9",
+            "requested_version": 1,
+            "snapshot_id": 0,
+            "submitted_at": 1789473019,
+            "target": "Some Other Compute"
+          },
+          "step": "request for another target"
+        },
+        {
+          "tx": "0x57c1452ffbac4b1e4bc993fe1c0780f7d8c6732c723a42bb487e0b4d415104a1",
+          "request_key": "live-real_evidence-10",
+          "request": {
+            "action_type": "SUBSCRIBE",
+            "affected_conditions": [],
+            "agent": "0x0b5358932B722a42de71F5DdDFA4b354287d03c6",
+            "amount": 470000,
+            "assessed": false,
+            "currency": "USD",
+            "decision": "DENIED",
+            "mandate_id": "1",
+            "mandate_version": 1,
+            "material_change": false,
+            "preflight": [
+              {
+                "check": "agent_matches_mandate",
+                "passed": true
+              },
+              {
+                "check": "mandate_active",
+                "passed": true
+              },
+              {
+                "check": "mandate_not_expired",
+                "passed": true
+              },
+              {
+                "check": "version_current",
+                "passed": true
+              },
+              {
+                "check": "action_permitted",
+                "passed": false
+              },
+              {
+                "check": "target_permitted",
+                "passed": true
+              },
+              {
+                "check": "currency_matches",
+                "passed": true
+              },
+              {
+                "check": "amount_within_limit",
+                "passed": true
+              }
+            ],
+            "principal": "0x2E51c205910f1d319A32249b65cA6F4b0345821d",
+            "reason_code": "ACTION_NOT_PERMITTED",
+            "request_id": "8",
+            "request_key": "live-real_evidence-10",
+            "requested_version": 1,
+            "snapshot_id": 0,
+            "submitted_at": 1789473036,
+            "target": "GitHub Codespaces compute"
+          },
+          "step": "request for another action"
+        },
+        {
+          "tx": "0xaf4dc546e172638e3241fdf2b5a54c8f018967dcf94cafbfd2e601b342e90b92",
+          "request_key": "live-real_evidence-1",
+          "step": "replay of the first request_key (refused)"
+        },
+        {
+          "tx": "0xd5af093b02021820e11931442e16ecc7818555530fcce53f2f8ed9451329f07d",
+          "request_key": "live-real_evidence-11",
+          "request": {
+            "action_type": "PURCHASE",
+            "affected_conditions": [],
+            "agent": "0x0b5358932B722a42de71F5DdDFA4b354287d03c6",
+            "amount": 100,
+            "assessed": false,
+            "currency": "USD",
+            "decision": "DENIED",
+            "mandate_id": "1",
+            "mandate_version": 1,
+            "material_change": false,
+            "preflight": [
+              {
+                "check": "agent_matches_mandate",
+                "passed": true
+              },
+              {
+                "check": "mandate_active",
+                "passed": true
+              },
+              {
+                "check": "mandate_not_expired",
+                "passed": true
+              },
+              {
+                "check": "version_current",
+                "passed": false
+              },
+              {
+                "check": "action_permitted",
+                "passed": true
+              },
+              {
+                "check": "target_permitted",
+                "passed": true
+              },
+              {
+                "check": "currency_matches",
+                "passed": true
+              },
+              {
+                "check": "amount_within_limit",
+                "passed": true
+              }
+            ],
+            "principal": "0x2E51c205910f1d319A32249b65cA6F4b0345821d",
+            "reason_code": "VERSION_MISMATCH",
+            "request_id": "9",
+            "request_key": "live-real_evidence-11",
+            "requested_version": 1,
+            "snapshot_id": 0,
+            "submitted_at": 1789473117,
+            "target": "GitHub Codespaces compute"
+          },
+          "step": "request naming version 1 after update"
+        },
+        {
+          "tx": "0x189eb0bf362fab1e695322eab866636fc2323011ca2a6bce0dd5dc120260e52f",
+          "request_key": "live-real_evidence-12",
+          "request": {
+            "action_type": "PURCHASE",
+            "affected_conditions": [],
+            "agent": "0x0b5358932B722a42de71F5DdDFA4b354287d03c6",
+            "amount": 100,
+            "assessed": false,
+            "currency": "USD",
+            "decision": "DENIED",
+            "mandate_id": "1",
+            "mandate_version": 2,
+            "material_change": false,
+            "preflight": [
+              {
+                "check": "agent_matches_mandate",
+                "passed": true
+              },
+              {
+                "check": "mandate_active",
+                "passed": false
+              },
+              {
+                "check": "mandate_not_expired",
+                "passed": true
+              },
+              {
+                "check": "version_current",
+                "passed": true
+              },
+              {
+                "check": "action_permitted",
+                "passed": true
+              },
+              {
+                "check": "target_permitted",
+                "passed": true
+              },
+              {
+                "check": "currency_matches",
+                "passed": true
+              },
+              {
+                "check": "amount_within_limit",
+                "passed": true
+              }
+            ],
+            "principal": "0x2E51c205910f1d319A32249b65cA6F4b0345821d",
+            "reason_code": "MANDATE_REVOKED",
+            "request_id": "10",
+            "request_key": "live-real_evidence-12",
+            "requested_version": 2,
+            "snapshot_id": 0,
+            "submitted_at": 1789473151,
+            "target": "GitHub Codespaces compute"
+          },
+          "step": "request after revocation"
+        }
+      ],
+      "reality_check": [
+        true,
+        true
+      ]
+    },
+    "material_change": {
+      "mandate_id": "2",
+      "terms": {
+        "action_type": "PURCHASE",
+        "agent_label": "Procurement Agent",
+        "conditions": [
+          {
+            "key": "terms_compatible",
+            "requirement": "Northwind's current terms allow business customers to purchase compute capacity."
+          },
+          {
+            "key": "intended_use_permitted",
+            "requirement": "Northwind's acceptable use policy permits AI inference workloads."
+          }
+        ],
+        "created_at": 1789471768,
+        "currency": "USD",
+        "expires_at": 1790076561,
+        "intended_use": "Run AI inference workloads",
+        "max_amount": 500000,
+        "sources": [
+          {
+            "host": "raw.githubusercontent.com",
+            "id": "S1",
+            "purpose": "POLICY",
+            "url": "https://raw.githubusercontent.com/Olawalter/Mandate/main/demo/northwind-compute/acceptable-use.md"
+          }
+        ],
+        "target": "Northwind Compute capacity",
+        "version": 1
+      },
+      "requests": [
+        {
+          "tx": "0x860544bcdc0b71a114ad1a1d79f8e93771dfadd77e34da1b5c69cadc5b56f908",
+          "request_key": "live-material_change-2",
+          "request": {
+            "action_type": "PURCHASE",
+            "affected_conditions": [],
+            "agent": "0x0b5358932B722a42de71F5DdDFA4b354287d03c6",
+            "amount": 470000,
+            "assessed": true,
+            "currency": "USD",
+            "decision": "AUTHORIZED",
+            "mandate_id": "2",
+            "mandate_version": 1,
+            "material_change": false,
+            "preflight": [
+              {
+                "check": "agent_matches_mandate",
+                "passed": true
+              },
+              {
+                "check": "mandate_active",
+                "passed": true
+              },
+              {
+                "check": "mandate_not_expired",
+                "passed": true
+              },
+              {
+                "check": "version_current",
+                "passed": true
+              },
+              {
+                "check": "action_permitted",
+                "passed": true
+              },
+              {
+                "check": "target_permitted",
+                "passed": true
+              },
+              {
+                "check": "currency_matches",
+                "passed": true
+              },
+              {
+                "check": "amount_within_limit",
+                "passed": true
+              }
+            ],
+            "principal": "0x2E51c205910f1d319A32249b65cA6F4b0345821d",
+            "reason_code": "CONDITIONS_SATISFIED",
+            "request_id": "2",
+            "request_key": "live-material_change-2",
+            "requested_version": 1,
+            "snapshot_id": 2,
+            "submitted_at": 1789471784,
+            "target": "Northwind Compute capacity"
+          },
+          "snapshot": {
+            "affected_conditions": [],
+            "baseline_snapshot_id": 0,
+            "conditions": [
+              {
+                "finding": "SATISFIED",
+                "key": "terms_compatible",
+                "quote": "Business customers may purchase compute capacity under these terms.",
+                "source": "S1"
+              },
+              {
+                "finding": "SATISFIED",
+                "key": "intended_use_permitted",
+                "quote": "AI inference workloads are permitted on all compute plans.",
+                "source": "S1"
+              }
+            ],
+            "evaluated_at": 1789471784,
+            "intended_use_permitted": true,
+            "mandate_id": "2",
+            "mandate_version": 1,
+            "material_change": false,
+            "provider_eligible": null,
+            "request_id": "2",
+            "service_available": null,
+            "snapshot_id": 2,
+            "source_count": 1,
+            "sources": [
+              {
+                "id": "S1",
+                "purpose": "POLICY",
+                "readable": true,
+                "url": "https://raw.githubusercontent.com/Olawalter/Mandate/main/demo/northwind-compute/acceptable-use.md"
+              }
+            ],
+            "terms_compatible": true
+          },
+          "step": "request [policy permits inference]"
+        },
+        {
+          "tx": "0x1bb4a8f72a0c86227013de05d8d15bd847eff1e84694886ab5a7e467848aa9db",
+          "request_key": "live-material_change-3",
+          "request": {
+            "action_type": "PURCHASE",
+            "affected_conditions": [],
+            "agent": "0x0b5358932B722a42de71F5DdDFA4b354287d03c6",
+            "amount": 470000,
+            "assessed": true,
+            "currency": "USD",
+            "decision": "AUTHORIZED",
+            "mandate_id": "2",
+            "mandate_version": 1,
+            "material_change": false,
+            "preflight": [
+              {
+                "check": "agent_matches_mandate",
+                "passed": true
+              },
+              {
+                "check": "mandate_active",
+                "passed": true
+              },
+              {
+                "check": "mandate_not_expired",
+                "passed": true
+              },
+              {
+                "check": "version_current",
+                "passed": true
+              },
+              {
+                "check": "action_permitted",
+                "passed": true
+              },
+              {
+                "check": "target_permitted",
+                "passed": true
+              },
+              {
+                "check": "currency_matches",
+                "passed": true
+              },
+              {
+                "check": "amount_within_limit",
+                "passed": true
+              }
+            ],
+            "principal": "0x2E51c205910f1d319A32249b65cA6F4b0345821d",
+            "reason_code": "CONDITIONS_SATISFIED",
+            "request_id": "3",
+            "request_key": "live-material_change-3",
+            "requested_version": 1,
+            "snapshot_id": 3,
+            "submitted_at": 1789472178,
+            "target": "Northwind Compute capacity"
+          },
+          "snapshot": {
+            "affected_conditions": [],
+            "baseline_snapshot_id": 2,
+            "conditions": [
+              {
+                "finding": "SATISFIED",
+                "key": "terms_compatible",
+                "quote": "Business customers may purchase compute capacity under these terms.",
+                "source": "S1"
+              },
+              {
+                "finding": "SATISFIED",
+                "key": "intended_use_permitted",
+                "quote": "AI inference workloads are permitted on all compute plans.",
+                "source": "S1"
+              }
+            ],
+            "evaluated_at": 1789472178,
+            "intended_use_permitted": true,
+            "mandate_id": "2",
+            "mandate_version": 1,
+            "material_change": false,
+            "provider_eligible": null,
+            "request_id": "3",
+            "service_available": null,
+            "snapshot_id": 3,
+            "source_count": 1,
+            "sources": [
+              {
+                "id": "S1",
+                "purpose": "POLICY",
+                "readable": true,
+                "url": "https://raw.githubusercontent.com/Olawalter/Mandate/main/demo/northwind-compute/acceptable-use.md"
+              }
+            ],
+            "terms_compatible": true
+          },
+          "step": "request [billing wording changed]"
+        },
+        {
+          "tx": "0x2150de44eaef792f4243ecea3c899eb15f5b89f389a8b72afa11d0b780030b44",
+          "request_key": "live-material_change-4",
+          "request": {
+            "action_type": "PURCHASE",
+            "affected_conditions": [
+              "intended_use_permitted"
+            ],
+            "agent": "0x0b5358932B722a42de71F5DdDFA4b354287d03c6",
+            "amount": 470000,
+            "assessed": true,
+            "currency": "USD",
+            "decision": "REASSESS_REQUIRED",
+            "mandate_id": "2",
+            "mandate_version": 1,
+            "material_change": true,
+            "preflight": [
+              {
+                "check": "agent_matches_mandate",
+                "passed": true
+              },
+              {
+                "check": "mandate_active",
+                "passed": true
+              },
+              {
+                "check": "mandate_not_expired",
+                "passed": true
+              },
+              {
+                "check": "version_current",
+                "passed": true
+              },
+              {
+                "check": "action_permitted",
+                "passed": true
+              },
+              {
+                "check": "target_permitted",
+                "passed": true
+              },
+              {
+                "check": "currency_matches",
+                "passed": true
+              },
+              {
+                "check": "amount_within_limit",
+                "passed": true
+              }
+            ],
+            "principal": "0x2E51c205910f1d319A32249b65cA6F4b0345821d",
+            "reason_code": "MATERIAL_CHANGE",
+            "request_id": "4",
+            "request_key": "live-material_change-4",
+            "requested_version": 1,
+            "snapshot_id": 4,
+            "submitted_at": 1789472556,
+            "target": "Northwind Compute capacity"
+          },
+          "snapshot": {
+            "affected_conditions": [
+              "intended_use_permitted"
+            ],
+            "baseline_snapshot_id": 3,
+            "conditions": [
+              {
+                "finding": "SATISFIED",
+                "key": "terms_compatible",
+                "quote": "Business customers may purchase compute capacity under these terms.",
+                "source": "S1"
+              },
+              {
+                "finding": "VIOLATED",
+                "key": "intended_use_permitted",
+                "quote": "AI inference workloads are prohibited on all compute plans.",
+                "source": "S1"
+              }
+            ],
+            "evaluated_at": 1789472556,
+            "intended_use_permitted": false,
+            "mandate_id": "2",
+            "mandate_version": 1,
+            "material_change": true,
+            "provider_eligible": null,
+            "request_id": "4",
+            "service_available": null,
+            "snapshot_id": 4,
+            "source_count": 1,
+            "sources": [
+              {
+                "id": "S1",
+                "purpose": "POLICY",
+                "readable": true,
+                "url": "https://raw.githubusercontent.com/Olawalter/Mandate/main/demo/northwind-compute/acceptable-use.md"
+              }
+            ],
+            "terms_compatible": true
+          },
+          "step": "request [policy prohibits inference]"
+        },
+        {
+          "tx": "0x6b79c93670d2e8181bfc71fc0da8697de2ebd5a2ad49cd848d719ad737eb4f83",
+          "request_key": "live-material_change-5",
+          "request": {
+            "action_type": "PURCHASE",
+            "affected_conditions": [],
+            "agent": "0x0b5358932B722a42de71F5DdDFA4b354287d03c6",
+            "amount": 470000,
+            "assessed": true,
+            "currency": "USD",
+            "decision": "AUTHORIZED",
+            "mandate_id": "2",
+            "mandate_version": 1,
+            "material_change": false,
+            "preflight": [
+              {
+                "check": "agent_matches_mandate",
+                "passed": true
+              },
+              {
+                "check": "mandate_active",
+                "passed": true
+              },
+              {
+                "check": "mandate_not_expired",
+                "passed": true
+              },
+              {
+                "check": "version_current",
+                "passed": true
+              },
+              {
+                "check": "action_permitted",
+                "passed": true
+              },
+              {
+                "check": "target_permitted",
+                "passed": true
+              },
+              {
+                "check": "currency_matches",
+                "passed": true
+              },
+              {
+                "check": "amount_within_limit",
+                "passed": true
+              }
+            ],
+            "principal": "0x2E51c205910f1d319A32249b65cA6F4b0345821d",
+            "reason_code": "CONDITIONS_SATISFIED",
+            "request_id": "5",
+            "request_key": "live-material_change-5",
+            "requested_version": 1,
+            "snapshot_id": 5,
+            "submitted_at": 1789472943,
+            "target": "Northwind Compute capacity"
+          },
+          "snapshot": {
+            "affected_conditions": [],
+            "baseline_snapshot_id": 3,
+            "conditions": [
+              {
+                "finding": "SATISFIED",
+                "key": "terms_compatible",
+                "quote": "Business customers may purchase compute capacity under these terms.",
+                "source": "S1"
+              },
+              {
+                "finding": "SATISFIED",
+                "key": "intended_use_permitted",
+                "quote": "AI inference workloads are permitted on all compute plans.",
+                "source": "S1"
+              }
+            ],
+            "evaluated_at": 1789472943,
+            "intended_use_permitted": true,
+            "mandate_id": "2",
+            "mandate_version": 1,
+            "material_change": false,
+            "provider_eligible": null,
+            "request_id": "5",
+            "service_available": null,
+            "snapshot_id": 5,
+            "source_count": 1,
+            "sources": [
+              {
+                "id": "S1",
+                "purpose": "POLICY",
+                "readable": true,
+                "url": "https://raw.githubusercontent.com/Olawalter/Mandate/main/demo/northwind-compute/acceptable-use.md"
+              }
+            ],
+            "terms_compatible": true
+          },
+          "step": "request [fresh assessment, permitted again]"
+        }
+      ],
+      "pages": [
+        {
+          "message": "demo: Northwind permits AI inference",
+          "commit": null,
+          "url": "https://raw.githubusercontent.com/Olawalter/Mandate/main/demo/northwind-compute/acceptable-use.md",
+          "served_at": "2026-09-15T11:29:19Z"
+        },
+        {
+          "message": "demo: Northwind changes billing wording only",
+          "commit": "9162b2ea7c41368921547b58a140707b1d13608c",
+          "url": "https://raw.githubusercontent.com/Olawalter/Mandate/main/demo/northwind-compute/acceptable-use.md",
+          "served_at": "2026-09-15T11:36:09Z"
+        },
+        {
+          "message": "demo: Northwind prohibits AI inference",
+          "commit": "44d8d47de4c0356e2c98e2e1ef30a52f42c6e438",
+          "url": "https://raw.githubusercontent.com/Olawalter/Mandate/main/demo/northwind-compute/acceptable-use.md",
+          "served_at": "2026-09-15T11:42:29Z"
+        },
+        {
+          "message": "demo: Northwind permits AI inference again",
+          "commit": "d650465935f2daae3905c54255d676113d657777",
+          "url": "https://raw.githubusercontent.com/Olawalter/Mandate/main/demo/northwind-compute/acceptable-use.md",
+          "served_at": "2026-09-15T11:48:55Z"
+        }
+      ]
+    }
+  },
+  "deployment": {
+    "address": "0x5344bEae1A09c674831B174eD6BD077a5d7e58ba",
+    "tx": "0x41ea41ff7167337b7bd951bae3450e32ebf2abc240528fe5b178d331280df691",
+    "consensus": "MAJORITY_AGREE"
+  },
+  "contract": "0x5344bEae1A09c674831B174eD6BD077a5d7e58ba",
+  "finality": {
+    "tx": "0xc618a68a1c9fe1831b6b18132acb40604c3c20a817f1b9f5fa36a4f8a1c9f14c",
+    "facts": {
+      "status": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "votes": [
+        "agree",
+        "agree",
+        "agree",
+        "idle",
+        "idle"
+      ],
+      "rotations": 1
+    },
+    "request_id": "1",
+    "final_receipt": {
+      "mandate_terms": {
+        "action_type": "PURCHASE",
+        "agent_label": "Procurement Agent",
+        "conditions": [
+          {
+            "key": "service_available",
+            "requirement": "GitHub reports the Codespaces component as operational."
+          }
+        ],
+        "created_at": 1789471662,
+        "currency": "USD",
+        "expires_at": 1790076454,
+        "intended_use": "Cloud development environments for the engineering team",
+        "max_amount": 500000,
+        "sources": [
+          {
+            "host": "www.githubstatus.com",
+            "id": "S1",
+            "purpose": "PROVIDER_STATUS",
+            "url": "https://www.githubstatus.com/api/v2/components.json"
+          },
+          {
+            "host": "www.githubstatus.com",
+            "id": "S2",
+            "purpose": "PROVIDER_STATUS",
+            "url": "https://www.githubstatus.com/api/v2/status.json"
+          }
+        ],
+        "target": "GitHub Codespaces compute",
+        "version": 1
+      },
+      "request": {
+        "action_type": "PURCHASE",
+        "affected_conditions": [],
+        "agent": "0x0b5358932B722a42de71F5DdDFA4b354287d03c6",
+        "amount": 470000,
+        "assessed": true,
+        "currency": "USD",
+        "decision": "AUTHORIZED",
+        "mandate_id": "1",
+        "mandate_version": 1,
+        "material_change": false,
+        "preflight": [
+          {
+            "check": "agent_matches_mandate",
+            "passed": true
+          },
+          {
+            "check": "mandate_active",
+            "passed": true
+          },
+          {
+            "check": "mandate_not_expired",
+            "passed": true
+          },
+          {
+            "check": "version_current",
+            "passed": true
+          },
+          {
+            "check": "action_permitted",
+            "passed": true
+          },
+          {
+            "check": "target_permitted",
+            "passed": true
+          },
+          {
+            "check": "currency_matches",
+            "passed": true
+          },
+          {
+            "check": "amount_within_limit",
+            "passed": true
+          }
+        ],
+        "principal": "0x2E51c205910f1d319A32249b65cA6F4b0345821d",
+        "reason_code": "CONDITIONS_SATISFIED",
+        "request_id": "1",
+        "request_key": "live-real_evidence-1",
+        "requested_version": 1,
+        "snapshot_id": 1,
+        "submitted_at": 1789471681,
+        "target": "GitHub Codespaces compute"
+      },
+      "snapshot": {
+        "affected_conditions": [],
+        "baseline_snapshot_id": 0,
+        "conditions": [
+          {
+            "finding": "SATISFIED",
+            "key": "service_available",
+            "quote": "\"Codespaces\",\"status\":\"operational\"",
+            "source": "S1"
+          }
+        ],
+        "evaluated_at": 1789471681,
+        "intended_use_permitted": null,
+        "mandate_id": "1",
+        "mandate_version": 1,
+        "material_change": false,
+        "provider_eligible": null,
+        "request_id": "1",
+        "service_available": true,
+        "snapshot_id": 1,
+        "source_count": 2,
+        "sources": [
+          {
+            "id": "S1",
+            "purpose": "PROVIDER_STATUS",
+            "readable": true,
+            "url": "https://www.githubstatus.com/api/v2/components.json"
+          },
+          {
+            "id": "S2",
+            "purpose": "PROVIDER_STATUS",
+            "readable": true,
+            "url": "https://www.githubstatus.com/api/v2/status.json"
+          }
+        ],
+        "terms_compatible": null
+      }
+    }
+  },
+  "finished_at": "2026-09-15T11:52:43Z"
+}

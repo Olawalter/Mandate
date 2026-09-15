@@ -1,0 +1,308 @@
+{
+  "ctor": {
+    "params": [],
+    "kwparams": {}
+  },
+  "methods": {
+    "create_mandate": {
+      "params": [
+        [
+          "agent",
+          "string"
+        ],
+        [
+          "agent_label",
+          "string"
+        ],
+        [
+          "action_type",
+          "string"
+        ],
+        [
+          "target",
+          "string"
+        ],
+        [
+          "max_amount",
+          "int"
+        ],
+        [
+          "currency",
+          "string"
+        ],
+        [
+          "expires_at",
+          "int"
+        ],
+        [
+          "intended_use",
+          "string"
+        ],
+        [
+          "conditions_json",
+          "string"
+        ],
+        [
+          "sources_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "get_agent_mandates": {
+      "params": [
+        [
+          "agent",
+          "string"
+        ],
+        [
+          "offset",
+          "int"
+        ],
+        [
+          "limit",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_authorization": {
+      "params": [
+        [
+          "request_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_decision_receipt": {
+      "params": [
+        [
+          "request_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_evidence_snapshot": {
+      "params": [
+        [
+          "snapshot_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_mandate": {
+      "params": [
+        [
+          "mandate_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_mandate_version": {
+      "params": [
+        [
+          "mandate_id",
+          "string"
+        ],
+        [
+          "version",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_principal_mandates": {
+      "params": [
+        [
+          "principal",
+          "string"
+        ],
+        [
+          "offset",
+          "int"
+        ],
+        [
+          "limit",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "get_protocol_info": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "list_mandate_requests": {
+      "params": [
+        [
+          "mandate_id",
+          "string"
+        ],
+        [
+          "offset",
+          "int"
+        ],
+        [
+          "limit",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "list_mandates": {
+      "params": [
+        [
+          "offset",
+          "int"
+        ],
+        [
+          "limit",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "list_requests": {
+      "params": [
+        [
+          "offset",
+          "int"
+        ],
+        [
+          "limit",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "dict"
+    },
+    "request_authorization": {
+      "params": [
+        [
+          "mandate_id",
+          "string"
+        ],
+        [
+          "mandate_version",
+          "int"
+        ],
+        [
+          "action_type",
+          "string"
+        ],
+        [
+          "target",
+          "string"
+        ],
+        [
+          "amount",
+          "int"
+        ],
+        [
+          "currency",
+          "string"
+        ],
+        [
+          "request_key",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "revoke_mandate": {
+      "params": [
+        [
+          "mandate_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "null",
+      "payable": false
+    },
+    "update_mandate": {
+      "params": [
+        [
+          "mandate_id",
+          "string"
+        ],
+        [
+          "expected_version",
+          "int"
+        ],
+        [
+          "agent_label",
+          "string"
+        ],
+        [
+          "action_type",
+          "string"
+        ],
+        [
+          "target",
+          "string"
+        ],
+        [
+          "max_amount",
+          "int"
+        ],
+        [
+          "currency",
+          "string"
+        ],
+        [
+          "expires_at",
+          "int"
+        ],
+        [
+          "intended_use",
+          "string"
+        ],
+        [
+          "conditions_json",
+          "string"
+        ],
+        [
+          "sources_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "int",
+      "payable": false
+    }
+  }
+}
