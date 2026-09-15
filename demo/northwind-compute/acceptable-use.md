@@ -14,7 +14,7 @@ Business customers may purchase compute capacity under these terms.
 
 ## Permitted workloads
 
-AI inference workloads are permitted on all compute plans.
+AI inference workloads are prohibited on all compute plans.
 
 ## Billing
 
